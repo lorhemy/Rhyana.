@@ -1,0 +1,941 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Confirme sua presença!</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Cinzel+Decorative:wght@700&family=Great+Vibes&family=Cormorant+Garamond:wght@300;400;500;600&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:linear-gradient(135deg,#1a0707,#3a0909,#5b1111);
+    color:white;
+    min-height:100vh;
+}
+
+@media(max-width:600px){
+
+    .container{
+        padding:15px 10px;
+    }
+
+    .boas-vindas{
+        padding:25px 15px;
+    }
+
+    .formulario{
+        padding:20px 15px;
+    }
+
+}
+
+.hero{
+    text-align:center;
+    padding:40px 20px;
+    border:1px solid rgba(255,215,0,.2);
+    border-radius:25px;
+    backdrop-filter:blur(10px);
+    background:rgba(0,0,0,.25);
+    box-shadow:0 0 30px rgba(255,215,0,.1);
+}
+
+.topo{
+    font-family:'Cinzel',serif;
+    color:#f6d88f;
+    letter-spacing:2px;
+    margin-bottom:15px;
+}
+
+.nome{
+    font-family:'Cinzel',serif;
+    font-size:2rem;
+    color:#f5deb3;
+}
+
+.idade{
+    font-family:'Great Vibes',cursive;
+    font-size:6rem;
+    color:#ffda8a;
+    margin:10px 0 20px;
+}
+
+.info{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+    gap:20px;
+    margin-top:30px;
+}
+
+.card{
+    background:rgba(255,255,255,.05);
+    padding:20px;
+    border-radius:15px;
+    border:1px solid rgba(255,215,0,.15);
+}
+
+.card h3{
+    color:#f6d88f;
+    margin-bottom:10px;
+}
+
+.frase{
+    text-align:center;
+    margin:40px 0;
+    font-size:1.1rem;
+    line-height:1.8;
+}
+
+.formulario{
+    background:rgba(0,0,0,.25);
+    border-radius:25px;
+    padding:35px;
+    border:1px solid rgba(255,215,0,.2);
+}
+@media(max-width:600px){
+
+ 
+
+}
+.formulario h2{
+    text-align:center;
+    color:#ffd87a;
+    margin-bottom:25px;
+    font-family:'Great Vibes',cursive;
+    font-size:2.2rem;
+    font-weight:normal;
+
+}
+
+input, select, textarea{
+    width:100%;
+    padding:15px;
+    margin-bottom:15px;
+    border:none;
+    border-radius:10px;
+    background:rgba(255,255,255,.1);
+    color:white;
+    font-size:15px;
+}
+
+input::placeholder,
+textarea::placeholder{
+    color:#ddd;
+}
+
+button{
+    width:100%;
+    padding:15px;
+    border:none;
+    border-radius:10px;
+    background:linear-gradient(45deg,#d4a437,#ffdd95);
+    color:#4a1b00;
+    font-weight:600;
+    cursor:pointer;
+    font-size:16px;
+}
+
+button:hover{
+    transform:scale(1.02);
+}
+
+.presente{
+    margin-top:40px;
+    text-align:center;
+    background:rgba(88, 17, 17, 0.05);
+    padding:25px;
+    border-radius:20px;
+    border:1px solid rgba(198, 172, 25, 0.15);
+}
+
+.presente h3{
+    color:#f6d88f;
+    margin-bottom:10px;
+}
+
+.presente a{
+    color:#ffda8a;
+    text-decoration:none;
+    font-weight:600;
+}
+
+footer{
+    text-align:center;
+    margin-top:40px;
+    opacity:.8;
+}
+
+@media(max-width:600px){
+    .idade{
+        font-size:4.5rem;
+
+    }
+}
+
+.boas-vindas{
+    text-align:center;
+    margin-bottom:50px;
+    padding:40px 30px;
+    border:1px solid rgba(255,215,0,.2);
+    border-radius:25px;
+    background:rgba(255,255,255,.03);
+    box-shadow:
+        0 0 20px rgba(255,215,0,.15),
+        0 0 40px rgba(255,215,0,.08);
+}
+
+@media(max-width:600px){
+
+    .boas-vindas h1{
+        font-size:2rem;
+        line-height:1.1;
+    }
+
+}
+
+
+
+
+   .boas-vindas h1{
+    font-family:'Great Vibes',cursive;
+    font-size:5rem;
+    color:#fff7e0;
+
+    text-shadow:
+        0 0 3px rgba(255,255,255,.8),
+        0 0 10px rgba(255,215,0,.8),
+        0 0 20px rgba(255,215,0,.5);
+
+    margin-bottom:20px;
+}
+
+
+
+
+.boas-vindas h2{
+    font-family:'Cinzel Decorative',serif;
+    letter-spacing:2px;
+    color:#fff3d0;
+    margin-bottom:25px;
+}
+
+
+    @media(max-width:600px){
+
+    .boas-vindas p{
+        font-size:1.1rem;
+        line-height:1.6;
+    }
+
+}
+
+
+.destaque{
+    color:#ffd87a;
+    font-weight:bold;
+}
+
+.whatsapp-btn{
+    display:block;
+    width:100%;
+    text-align:center;
+    text-decoration:none;
+    padding:15px;
+    border-radius:10px;
+    background:linear-gradient(45deg,#d4a437,#ffdd95);
+    color:#4a1b00;
+    font-weight:600;
+    margin-top:10px;
+}
+
+.presente{
+    margin-top:40px;
+    text-align:center;
+    background:rgba(255,255,255,.05);
+    padding:35px;
+    border-radius:20px;
+    border:1px solid rgba(255,215,0,.15);
+}
+
+.presente h3{
+    color:#ffd87a;
+    font-size:3rem;
+    margin-bottom:15px;
+    font-family:'Great Vibes',cursive;
+    font-weight:normal;
+
+}
+
+.presente p{
+    font-family:'Cormorant Garamond',serif;
+    font-size:1.3rem;
+    line-height:1.7;
+}
+
+body::before{
+    content:"";
+    position:fixed;
+    inset:0;
+
+    background-image:
+        radial-gradient(circle at 10% 20%, rgba(255,215,0,.8) 1px, transparent 2px),
+        radial-gradient(circle at 80% 10%, rgba(255,255,255,.8) 1px, transparent 2px),
+        radial-gradient(circle at 30% 80%, rgba(255,215,0,.7) 1px, transparent 2px),
+        radial-gradient(circle at 90% 60%, rgba(255,255,255,.8) 1px, transparent 2px);
+
+    background-size:300px 300px;
+    animation: brilho 12s linear infinite;
+    pointer-events:none;
+}
+
+@keyframes brilho{
+    from{
+        transform:translateY(0);
+    }
+    to{
+        transform:translateY(-100px);
+    }
+}
+
+
+
+
+.presente .whatsapp-btn{
+    font-size:1.25rem;
+    padding:20px;
+    color:#4a2400;
+    font-weight:700;
+
+    background:linear-gradient(
+        45deg,
+        #ffd700,
+        #fff2b3,
+        #ffd700
+    );
+
+
+    box-shadow:
+        0 0 15px rgba(15, 15, 14, 0.6),
+        0 0 30px rgba(24, 22, 8, 0.4);
+
+    animation:pulseGold 2s infinite;
+}
+
+@keyframes pulseGold{
+    0%{
+        transform:scale(1);
+    }
+    50%{
+        transform:scale(1.04);
+    }
+    100%{
+        transform:scale(1);
+    }
+}
+
+.btn-nao{
+    width:100%;
+    margin-top:12px;
+    padding:15px;
+    border:none;
+    border-radius:10px;
+    background:#7a1f1f;
+    color:white;
+    cursor:pointer;
+    font-size:16px;
+    font-weight:600;
+    transition:.3s;
+}
+
+.btn-nao:hover{
+    background:#952727;
+}
+
+
+
+.subtitulo-data{
+    margin-top:10px;
+    color:#f5deb3;
+    font-style:italic;
+}
+
+body::after{
+    content:"";
+    position:fixed;
+    inset:0;
+    background:
+        radial-gradient(circle at 15% 30%, rgba(255,255,255,.8) 1px, transparent 3px),
+        radial-gradient(circle at 80% 20%, rgba(255,215,0,.8) 1px, transparent 3px),
+        radial-gradient(circle at 70% 70%, rgba(255,255,255,.8) 1px, transparent 3px),
+        radial-gradient(circle at 30% 90%, rgba(255,215,0,.8) 1px, transparent 3px);
+    background-size:400px 400px;
+    animation:piscando 4s infinite alternate;
+    pointer-events:none;
+}
+
+@keyframes piscando{
+    from{opacity:.3;}
+    to{opacity:1;}
+}
+
+
+.mensagem-status{
+    margin-top:20px;
+    padding:20px;
+    border-radius:15px;
+    background:rgba(255,255,255,.05);
+    border:1px solid rgba(255,215,0,.2);
+    display:none;
+    line-height:1.8;
+    text-align:center;
+}
+textarea::placeholder{
+    color:#d9d9d9;
+    opacity:1;
+}
+
+.titulo-recado{
+    display:block;
+    margin-bottom:10px;
+    color:#ffd87a;
+    font-size:1.1rem;
+    font-weight:600;
+}
+
+
+
+
+
+.opcoes-presente{
+    display:flex;
+    gap:15px;
+    margin:20px 0;
+}
+
+.opcao-presente{
+    flex:1;
+    cursor:pointer;
+}
+
+.opcao-presente input{
+    display:none;
+}
+
+.opcao-presente span{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    width:100%;
+
+    min-height:80px;
+
+    padding:12px;
+
+    text-align:center;
+
+    border-radius:15px;
+
+    background:rgba(255,255,255,.08);
+
+    border:2px solid rgba(255,215,0,.3);
+
+    font-size:1rem;
+
+    font-weight:700;
+
+    word-break:break-word;
+}
+
+.opcao-presente{
+    flex:1;
+    min-width:0;
+}
+
+.opcao-presente span{
+    width:100%;
+    text-align:center;
+    padding:12px;
+    overflow:hidden;
+}
+
+
+.opcao-presente input:checked + span{
+    background:linear-gradient(
+        45deg,
+        #d4a437,
+        #ffdd95
+    );
+
+    color:#4a1b00;
+}
+
+
+
+.agradecimento{
+    margin-top:50px;
+    text-align:center;
+    padding:35px;
+
+    border-radius:25px;
+
+    background:rgba(255,255,255,.05);
+
+    border:1px solid rgba(255,215,0,.25);
+
+    box-shadow:
+        0 0 20px rgba(255,215,0,.15),
+        0 0 40px rgba(255,215,0,.08);
+}
+
+.agradecimento{
+    font-family:'Great Vibes', cursive;
+    font-size:3rem;
+    color:#fff6d6;
+
+    text-shadow:
+        0 0 5px rgba(255,255,255,.9),
+        0 0 15px rgba(255,215,0,.9),
+        0 0 25px rgba(255,215,0,.7),
+        0 0 40px rgba(255,215,0,.5);
+
+    animation: brilhoTitulo 3s ease-in-out infinite alternate;
+}
+
+.agradecimento p{
+    margin-top:20px;
+
+    font-family:'Cormorant Garamond', serif;
+
+    font-size:1.35rem;
+
+    line-height:1.8;
+
+    color:#fff5df;
+
+    text-shadow:
+        0 0 5px rgba(255,215,0,.25);
+}
+
+@keyframes brilhoTitulo{
+    from{
+        text-shadow:
+            0 0 5px rgba(255,255,255,.8),
+            0 0 15px rgba(255,215,0,.6),
+            0 0 25px rgba(255,215,0,.4);
+    }
+
+    to{
+        text-shadow:
+            0 0 10px rgba(255,255,255,1),
+            0 0 25px rgba(255,215,0,.9),
+            0 0 40px rgba(255,215,0,.7),
+            0 0 60px rgba(255,215,0,.5);
+    }
+}
+
+@media(max-width:600px){
+
+    .agradecimento{
+        padding:25px 20px;
+    }
+
+    .agradecimento{
+        font-size:2.2rem;
+    }
+
+    .agradecimento p{
+        font-size:1.15rem;
+    }
+
+}
+
+
+@media(max-width:600px){
+
+    .opcoes-presente{
+        display:flex;
+        gap:10px;
+    }
+
+    .opcao-presente{
+        flex:1;
+        min-width:0;
+    }
+
+    .opcao-presente span{
+        height:70px;
+        font-size:1.1rem;
+        padding:10px;
+    }
+
+}
+
+
+@media(max-width:600px){
+
+    .container{
+       
+        padding:15px;
+    }
+
+    .hero,
+    .boas-vindas,
+    .formulario,
+    .presente,
+    .agradecimento{
+        width:100%;
+        padding:20px 15px;
+    }
+
+    .info{
+        grid-template-columns:1fr;
+    }
+
+    .idade{
+        font-size:4rem;
+    }
+
+    .presente h3{
+        font-size:2.2rem;
+    }
+
+}
+.container{
+    max-width:900px;
+    margin:auto;
+    padding:40px 20px;
+}
+
+</style>
+</head>
+
+
+
+
+<div class="container">
+<div class="boas-vindas">
+
+    <h1>✨ Bem-vindo ✨</h1>
+
+    <h2>UMA NOITE ESPECIAL ESTÁ SE APROXIMANDO</h2>
+
+    <p>
+        Você foi escolhido para fazer parte de um momento inesquecível.
+        Em breve celebraremos os <span class="destaque">15 anos da Rhyana</span>,
+        uma noite preparada com muito carinho, diversão e memórias que ficarão para sempre.
+
+        <br><br>
+
+        Sua presença tornará essa comemoração ainda mais especial.
+        Vista sua melhor energia, prepare seu sorriso e venha viver essa experiência conosco.
+
+        <br><br>
+
+        <span class="destaque">Mas atenção...</span> 
+
+        <br><br>
+
+         Aniversariante ainda não sabe de nada!
+        <br><br>
+
+        ✨ Sua presença será o melhor presente desta celebração. ✨
+    </p>
+
+</div>
+    <div class="hero">
+
+        <p class="topo">RELEMBRE ESTA DATA ESPECIAL</p>
+<h1 class="nome">RHYANA</h1>
+<div class="idade">15 anos</div>
+<p class="subtitulo-data">
+Uma celebração preparada com carinho espera por você.
+</p>
+        <div class="info">
+
+            <div class="card">
+                <h3>📍 Local</h3>
+                <p>Arena 4 de Junho</p>
+            </div>
+
+            <div class="card">
+                <h3>🕒 Horário</h3>
+                <p>A partir das 18:00</p>
+            </div>
+
+            <div class="card">
+                <h3>📅 Data</h3>
+                <p>28/06</p>
+            </div>
+
+        </div>
+
+    </div>
+
+<div class="frase">
+        Vista suas roupas esportivas e venha curtir!<br>
+        Será liberado 3 horas de quadra para jogarmos muito!
+    </div>
+
+
+<div class="presente">
+
+
+<label class="titulo-presente">
+   <h3>
+✨ Deseja tornar sua homenagem ainda mais especial? 🎁
+</h3>
+    <p>
+      Sua presença já é um presente valioso para esta celebração.
+
+Mas, caso deseje demonstrar seu carinho com uma lembrança especial e esteja em dúvida sobre o que escolher, teremos prazer em ajudar.
+
+<br><br>
+Lorhemy preparou algumas sugestões pensadas com carinho, de acordo com o estilo e os gostos da aniversariante.<br><br>
+
+Ao clicar em "Gostaria de receber algumas sugestões", você será direcionado(a) para uma conversa no WhatsApp com Lorhemy, que ficará feliz em compartilhar algumas ideias de presentes, enviar sugestões personalizadas e auxiliar você na escolha de uma lembrança especial. ✨💖
+
+
+        <br><br>
+
+        💛 Ficaremos felizes em ajudar você a escolher algo que combine perfeitamente com esse momento tão importante.
+    </p>
+</label>
+
+
+    <div class="opcoes-presente">
+
+    <label class="opcao-presente">
+        <input
+            type="radio"
+            name="presente"
+            value="Sim">
+ <span>Sim, gostaria de receber algumas sugestões.</span>
+    </label>
+
+    <label class="opcao-presente">
+        <input
+            type="radio"
+            name="presente"
+            value="Não">
+        <span>Não, já tenho algo em mente.</span>
+    </label>
+
+</div>
+<p> 
+      <strong>Sua resposta será encaminhada juntamente com a confirmação de presença.</strong>    
+</p>
+</div>
+
+
+
+
+
+    
+    <div class="formulario">
+
+      
+<div class="formulario">
+
+    <h2>Confirmação de Presença</h2>
+
+    <input type="text" id="nome" placeholder="Nome ">
+
+
+<label class="titulo-recado">
+     Deixe um recado para a aniversariante
+</label>
+
+    <textarea
+        id="recado"
+        rows="5"
+        placeholder="Deixe um recado para a aniversariante">
+    </textarea>
+
+
+
+    <button onclick="confirmarPresenca()">
+        Confirmar Presença
+    </button>
+
+    <div id="mensagemConfirmacao" class="mensagem-status"></div>
+
+    <button onclick="naoComparecer()" class="btn-nao">
+        Não Poderei Comparecer
+    </button>
+
+</div>
+           
+          
+
+    
+
+  <div class="agradecimento">
+    ✨ Obrigado por fazer parte desta história ✨
+
+    <p>
+        Sua presença, seu carinho e suas palavras tornam este momento ainda mais significativo para todos nós. Cada confirmação recebida representa mais uma pessoa querida participando de uma noite preparada com muito amor, dedicação e alegria.
+
+        <br><br>
+
+        Agradecemos por dedicar alguns instantes para responder ao convite. Independentemente da sua resposta, somos gratos pela consideração, pelo apoio e pelas boas energias enviadas para este momento tão especial na vida da Rhyana.
+
+        <br>Esperamos compartilhar sorrisos, emoções e lembranças inesquecíveis nesta celebração cercada por pessoas que fazem parte da nossa história.<br>
+
+        
+
+        <br>💛 Nos vemos em breve.<br>
+
+    </p>
+</div>
+
+    
+
+
+
+<script>
+
+
+
+let tipoResposta = "";
+function confirmarPresenca(){
+
+    tipoResposta = "confirmar";
+
+    document.getElementById("mensagemConfirmacao").style.display="block";
+
+    document.getElementById("mensagemConfirmacao").innerHTML = `
+    ✨ <strong>Confirmação recebida!</strong>
+
+    <br><br>
+
+    A presença de cada convidado torna esta celebração ainda mais especial, e ficamos muito felizes por poder contar com você.
+
+    <br><br>
+
+    A aniversariante chegará às 18h30. Recomendamos chegar com alguns minutos de antecedência para que todos possam se acomodar e aproveitar cada momento desta noite preparada com tanto carinho.
+
+    <br><br>
+
+    Nos vemos em breve!
+
+    <br><br>
+
+    🤫 E lembre-se: o segredo continua guardado até o grande dia.
+
+    <br><br>
+
+    <strong>Clique em OK para encaminhar sua resposta para Lorhemy.</strong>
+
+    <br><br>
+
+    <button onclick="enviarWhatsapp()" class="whatsapp-btn">
+        OK
+    </button>
+    `;
+}
+
+function naoComparecer(){
+
+    tipoResposta = "negar";
+
+    document.getElementById("mensagemConfirmacao").style.display="block";
+
+    document.getElementById("mensagemConfirmacao").innerHTML = `
+    💛 <strong>Agradecemos sua resposta.</strong>
+
+    <br><br>
+
+    Compreendemos perfeitamente sua ausência e agradecemos por nos avisar.
+
+    <br><br>
+
+    Mesmo não podendo estar presente nesta ocasião, ficamos felizes por fazer parte do carinho e das boas energias enviadas para a Rhyana neste momento tão especial.
+
+    <br><br>
+
+    Obrigado pela consideração e pelo apoio à nossa surpresa.
+
+    <br><br>
+
+    ✨ Desejamos tudo de melhor para você.
+
+    <br><br>
+
+    <strong>Clique em OK para encaminhar sua resposta para Lorhemy.</strong>
+
+    <br><br>
+
+    <button onclick="enviarWhatsapp()" class="whatsapp-btn">
+        OK
+    </button>
+    `;
+}
+
+
+
+function enviarWhatsapp(){
+
+    let nome = document.getElementById("nome").value;
+    let recado = document.getElementById("recado").value;
+
+    let presenteSelecionado =
+    document.querySelector('input[name="presente"]:checked');
+
+    let presente =
+    presenteSelecionado ?
+    presenteSelecionado.value :
+    "Não informado";
+
+    let mensagem = "";
+
+    if(tipoResposta === "confirmar"){
+
+        mensagem =
+`🎉 RESPOSTA DE CONVIDADO 🎉
+
+👤 Nome:
+${nome}
+
+📍 Presença:
+Confirmada
+
+🎁 Deseja sugestões de presentes?
+${presente}
+
+💌 Recado:
+${recado}`;
+
+    }else{
+
+        mensagem =
+`🎉 RESPOSTA DE CONVIDADO 🎉
+
+👤 Nome:
+${nome}
+
+📍 Presença:
+Não poderá comparecer
+
+🎁 Deseja sugestões de presentes?
+${presente}
+
+💌 Recado:
+${recado}`;
+
+    }
+
+    window.open(
+        "https://wa.me/5586999219368?text=" +
+        encodeURIComponent(mensagem),
+        "_blank"
+    );
+}
+</script>
